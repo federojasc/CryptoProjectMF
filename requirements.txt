@@ -1,0 +1,6 @@
+krakenex~=2.1.0
+plotly~=5.18.0
+pykrakenapi~=0.3.2
+dash~=2.14.2
+dash-bootstrap-components~=1.5.0
+
