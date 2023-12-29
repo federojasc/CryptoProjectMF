@@ -44,9 +44,6 @@ class Graph:
             fig.add_trace(go.Scatter(x=self.df.index, y=self.df['%D'], line=dict(color="orange"), name="Stochastic %D"),
                           secondary_y=False, row=2, col=1)
 
-            fig.add_hline(y=80, row=2, col=1, secondary_y=False, line_color="red")
-            fig.add_hline(y=20, row=2, col=1, secondary_y=False, line_color="green")
-
             fig.update_xaxes(row=1, col=1, rangeslider_thickness=0.05)
             fig.update_layout(width=1000, height=900)
             fig.update_layout(xaxis_showticklabels=True, xaxis2_showticklabels=True)

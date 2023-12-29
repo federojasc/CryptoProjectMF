@@ -1,8 +1,8 @@
 class Moving_Average:
 
     def __init__(self, slot, df):
-        self.slot = slot  # El periodo de la media móvil
-        self.df = df  # DataFrame con los datos de precios
+        self.slot = slot
+        self.df = df
 
     def calculate(self):
         try:
@@ -21,14 +21,11 @@ class Stochastic:
 
     def calculate(self):
         try:
-            # Calcular %K
             self.df['%K'] = (self.df['close'] - self.df['low'].rolling(window=14).min()) / (
                     self.df['high'].rolling(window=14).max() - self.df['low'].rolling(window=14).min()) * 100
 
-            # Calcular %D (media móvil de %K)
             self.df['%D'] = self.df['%K'].rolling(window=3).mean()
 
-            # Eliminar filas con valores NaN generados por las ventanas de las medias móviles
             self.df.dropna(inplace=True)
             self.df.fillna(value=0, inplace=True)
 

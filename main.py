@@ -71,7 +71,7 @@ except Exception as e:
 
 try:
     if __name__ == '__main__':
-        app.run_server(debug=True, use_reloader=False)
+        app.run_server(debug=True, use_reloader=False, port = 8051)
 
 except Exception as e:
     print('This problem has occurred at the start of the program: ' + str(e))
