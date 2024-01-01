@@ -31,7 +31,7 @@ This tool is designed to analyze cryptocurrency data, focusing especially on cur
 1. **Start the Dash Application**
 
     ```bash
-    python application.py
+    python main.py
     ```
 
 2. **Access the Web Interface**
